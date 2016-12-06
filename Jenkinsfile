@@ -66,7 +66,7 @@ stage('Publish Docker img') {
 }
 
 def mvn(def goals) {
-  withMaven(jdk: '8u112', maven: '3.3.9') {
+  withMaven() {
     sh "mvn ${goals}"
   }
 }
